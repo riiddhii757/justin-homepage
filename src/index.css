@@ -1,0 +1,33 @@
+/* index.css */
+
+/* 1. Use the single v4 entry point */
+@import "tailwindcss";
+
+/* 2. Move your variables into the Tailwind theme block */
+@theme {
+  --color-text: #6b6375;
+  --color-text-h: #08060d;
+  --color-bg: #fefefe;
+  --color-border: #e5e4e7;
+  --color-accent: #aa3bff;
+  --color-accent-bg: rgba(170, 59, 255, 0.08);
+  --color-accent-border: rgba(170, 59, 255, 0.3);
+  --color-social-bg: rgba(244, 243, 236, 0.5);
+  
+  /* For shadows, v4 uses specific variable names */
+  --shadow-custom: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+}
+
+/* 3. Your custom body styles remain the same */
+body {
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+  background-image: linear-gradient(to bottom, #e9d5ff, #ffe4f0, #c7d2fe);
+}
+
+/* Dark mode gradient */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: linear-gradient(to bottom, #111827, #5b21b6, #4f46e5);
+  }
+}
